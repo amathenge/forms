@@ -1,0 +1,76 @@
+# Macros to implement features
+
+# MENU/NAVIGATION BAR
+
+{% macro nav(user='Guest', admin=0) -%}
+<nav class="navbar navbar-expand-sm navbar-light bg-light border-top border-bottom">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#topmenu" aria-controls="topmenu" aria-expand="false" aria-label="Toggle Navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="topmenu">
+        <div class="navbar-nav">
+            <a class="nav-item nav-link text-primary" href="{{ url_for('home') }}">Home</a>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-primary" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Login Forms
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDarkDropdownMenuLink">
+                    <li><a class="nav-item nav-link text-primary" href="{{ url_for('login') }}">Login 1</a></li>
+                    <li><a class="nav-item nav-link text-primary" href="{{ url_for('login2') }}">Login 2</a></li>
+                    <li><a class="nav-item nav-link text-primary" href="{{ url_for('login3') }}">Login 3</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-primary" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Bootstrap Tests
+                </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDarkDropdownMenuLink">
+                <li><a class="nav-item nav-link text-primary" href="{{ url_for('blocktest') }}">Block Test</a></li>
+                <li><a class="nav-item nav-link text-primary" href="{{ url_for('dform') }}">Dynamic Forms</a></li>
+                <li><a class="nav-item nav-link text-primary" href="{{ url_for('fform') }}">Horizontal Forms</a></li>
+                <li><a class="nav-item nav-link text-primary" href="{{ url_for('fform2') }}">More Forms</a></li>
+                <li><a class="nav-item nav-link text-primary" href="{{ url_for('fform3') }}">Last set of Forms</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-primary" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Buttons and Checkboxes
+                </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDarkDropdownMenuLink">
+                <li><a class="nav-item nav-link text-primary" href="{{ url_for('bform') }}">Buttons</a></li>
+                <li><a class="nav-item nav-link text-primary" href="{{ url_for('cform') }}">Checkboxes</a></li>
+              </ul>
+            </li>
+            {% if admin == 1 %}
+            <a class="nav-item nav-link text-primary" href="{{ url_for('users') }}">User List</a>
+            {% endif %}
+        </div>
+    </div>
+    <div class="navbar-nav navbar-right">
+        <a class="nav-item nav-link text-primary" href="{{ url_for('logout') }}">logout</a>
+    </div>
+</nav>
+{%- endmacro %}
+
+
+# LOGIN FORM
+
+{% macro login(url, recaptcha=None) -%}
+<p class="h4 text-center mb-2">Login Form</p>
+<form action="{{ url }}" method="POST">
+<div class="form-group my-2">
+    <label for="email">Email</label>
+    <input class="form-control" type="email" id="email" name="email" placeholder="user@email.com" maxlength="30" required>
+</div>
+<div class="form-group my-2">
+    <label for="password">Password</label>
+    <input class="form-control" type="password" id="password" name="password" maxlength="30" required>
+</div>
+<div class="form-group d-grid my-2 text-center">
+    {% if recaptcha != None %}
+        {{ recaptcha }}
+    {% endif %}
+    <button class="btn btn-primary mt-3" type="submit">LOGIN</button>
+</div>
+</form>
+{%- endmacro %}

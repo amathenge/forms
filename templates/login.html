@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% from 'utils.j2' import nav, login %}
+
+{% block title %}Home Page{% endblock %}
+
+{% block heading %}Page Heading{% endblock %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-12">
+        {{ nav() }}
+    </div>
+</div>
+<div class="row justify-content-center">
+    <div class="col-4">&nbsp;</div>
+    <div class="col-4 text-center">
+        {{ login(url_for('login')) }}
+    </div>
+    <div class="col-4">&nbsp;</div>
+</div>
+
+{% if output %}
+<div class="row mt-5">
+    <div class="col-12 border">
+        {{ output }}
+    </div>
+</div>
+
+{% endif %}
+{% endblock %}

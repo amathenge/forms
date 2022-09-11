@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% from 'utils.j2' import nav %}
+
+{% block title %}Home Page{% endblock %}
+
+{% block heading %}Page Heading{% endblock %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-12">
+        {{ nav() }}
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12 text-center">
+        <p>You are logged out</p>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% from 'utils.j2' import nav %}
+
+{% block heading %}Dynamic Forms{% endblock %}
+
+{% block content %}
+{{ nav() }}
+<div class="row">
+    <p class="text-center">Dynamic Forms</p>
+</div>
+
+<div class="row">
+    <form action="#" method="POST">
+        <div class="d-grid" id="textelements">
+            <input type="text" name="gurarantor[]">
+        </div>
+    </form>
+</div>
+
+<div class="row">
+    <div class="col" id="controls">
+        <a href="#" id="add" name="add">ADD</a><br>
+        <a href="#" id="remove" name="remove">REMOVE</a>
+    </div>
+</div>
+<style>
+    .guarantor {
+        display: block;
+    }
+</style>
+<script>
+    var x = 2
+    var add = document.querySelector("#add")
+    var remove = document.querySelector('#remove')
+    var textelements = document.querySelector('#textelements')
+
+    add.onclick = function () {
+        var newField = document.createElement('input');
+        newField.setAttribute('type','text');
+        newField.setAttribute('name','guarantor[]');
+        newField.setAttribute('placeholder','Another Field');
+        newField.classList.add("guarantor");
+        textelements.appendChild(newField);
+    }
+
+    remove.onclick = function () {
+        var input_tags = textelements.getElementsByTagName('input');
+        if(input_tags.length > 1) {
+            textelements.removeChild(input_tags[(input_tags.length) - 1]);
+        }
+    }
+
+</script>
+{% endblock %}

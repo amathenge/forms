@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% from 'utils.j2' import nav %}
+
+{% block heading %}Horizontal Forms{% endblock %}
+
+{% block content %}
+{{ nav() }}
+<div class="row">
+    <p class="text-center">Buttons, buttons, buttons</p>
+</div>
+
+<div class="row my-2 border-bottom justify-content-center">
+    <p class="text-center border">centering buttons</p>
+    <div class="col-6 my-2 d-grid border">
+        <button class="btn btn-primary">click me for more</button>
+    </div>
+</div>
+
+<div class="row my-2 border-bottom justify-content-center">
+    <p class="text-center">Buttons filling in a column (3 columns)</p>
+    <div class="col-4 d-grid">
+        <button class="btn btn-primary">Button 1</button>
+    </div>
+    <div class="col-4 d-flex justify-content-center">
+        <div>
+            <button class="btn btn-primary d-grid">Button 2</button>
+        </div>
+    </div>
+    <div class="col-4 d-flex justify-content-end">
+        <button class="btn btn-primary d-grid">Button 3</button>
+    </div>
+</div>
+
+
+<div class="row my-2 border-bottom">
+    <p class="text-center">More buttons filling in a column (4 columns)</p>
+    <div class="col-3 d-flex justify-content-start">
+        <button class="btn btn-primary">Button 1<br>Left</button>
+    </div>
+    <div class="col-3 d-flex justify-content-center">
+        <div>
+            <button class="btn btn-primary">Button 2<br>Center</button>
+        </div>
+    </div>
+    <div class="col-3">
+        <button class="btn w-100 btn-primary">Button 3<br>100%</button>
+    </div>
+    <div class="col-3 d-flex justify-content-end">
+        <button class="btn w-50 btn-primary">Button 4<br>50% Right</button>
+    </div>
+</div>
+
+
+
+
+
+{% endblock %}

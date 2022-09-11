@@ -1,0 +1,164 @@
+{% extends 'base.html' %}
+{% from 'utils.j2' import nav %}
+
+{% block heading %}Horizontal Forms{% endblock %}
+
+{% block content %}
+{{ nav() }}
+<div class="row">
+    <p class="text-center">Horizontal Input Forms</p>
+</div>
+
+<div class="row my-2 border-bottom">
+    <p class="text-center"><strong>1.</strong> &lt;form-group&gt; and &lt;form-label&gt;</p>
+    <div class="col-md-6">
+        <div class="form-group">
+            <label for="textitem1" class="form-label">form-group and form-label</label>
+            <input type="text" class="form-control" id="textitem1" name="textitem1" value="form-control">
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="form-group">
+            <label for="textitem2" class="col-form-label">form-group and col-form-label</label>
+            <input type="text" class="form-control" id="textitem2" name="textitem2" value="form-control">
+        </div>
+    </div>
+</div>
+
+<div class="row my-2 border-bottom">
+    <p class="text-center"><strong>2.</strong> Not using &lt;form-group&gt;</p>
+    <div class="col-md-6">
+        <label for="textitem3" class="form-label">form-label no form-group</label>
+        <input type="text" class="form-control" id="textitem3" name="textitem3" value="form-control">
+    </div>
+    <div class="col-md-6">
+        <label for="textitem4" class="col-form-label">col-form-label no form-group</label>
+        <input type="text" class="form-control" id="textitem4" name="textitem4" value="form-control">
+    </div>
+</div>
+
+<div class="row my-2 border-bottom">
+    <p class="text-center"><strong>3.</strong> using &lt;input-group-text&gt;</p>
+    <div class="col-md-6 input-group">
+        <span class="input-group-text">&lt;span class="input-group-text"&gt;</span>
+        <input type="text" class="form-control" id="textitem5" name="textitem5" value="form-control">
+    </div>
+    <div class="col-md-6 input-group">
+        <span class="input-group-text">&lt;span class="input-group-text"&gt;</span>
+        <input type="text" class="form-control" id="textitem6" name="textitem6" value="form-control">
+    </div>
+</div>'
+
+<div class="row my-2 border-bottom justify-content-center">
+    <p class="text-center border"><strong>4.</strong> &lt;input-group&gt; example</p>
+    <div class="col-6 align-middle border">
+        <div class="input-group">
+            <span class="input-group-text">input-group Text</span>
+            <input type="text" class="form-control">
+        </div>
+    </div>
+</div>
+
+<div class="row my-2 border-bottom justify-content-center">
+    <p class="text-center border"><strong>5.</strong> this is an &lt;input-group&gt; with two inputs?</p>
+    <div class="col-6 align-middle border">
+        <div class="input-group">
+            <input type="text" class="form-control">
+            <input type="text" class="form-control">
+        </div>
+    </div>
+</div>
+
+<div class="row my-2 border-bottom">
+    <p class="text-center"><strong>6.</strong> Four input boxes &lt;form-group&gt; with labels using &lt;label&gt;</p>
+    <div class="col-md-3">
+        <div class="form-group">
+            <label for="textitem1" class="form-label">form-group and form-label</label>
+            <input type="text" class="form-control" id="textitem1" name="textitem1" value="form-control">
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="form-group">
+            <label for="textitem2" class="col-form-label">form-group and col-form-label</label>
+            <input type="text" class="form-control" id="textitem2" name="textitem2" value="form-control">
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="form-group">
+            <label for="textitem3" class="form-label">form-group and form-label</label>
+            <input type="text" class="form-control" id="textitem3" name="textitem3" value="form-control">
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="form-group">
+            <label for="textitem4" class="col-form-label">form-group and col-form-label</label>
+            <input type="text" class="form-control" id="textitem4" name="textitem4" value="form-control">
+        </div>
+    </div>
+</div>
+
+
+<div class="row my-2 border-bottom">
+    <p class="text-center"><strong>7.</strong> Three input boxes &lt;input-group&gt; with labels on the left using &lt;label&gt;</p>
+    <div class="col-md-4">
+        <div class="input-group">
+            <label for="textitem5" class="form-label">input-group and form-label</label>
+            <input type="text" class="form-control" id="textitem5" name="textitem5" value="form-control">
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="input-group">
+            <label for="textitem6" class="col-form-label">input-group and col-form-label</label>
+            <input type="text" class="form-control" id="textitem6" name="textitem6" value="form-control">
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="input-group">
+            <label for="textitem7" class="input-label">form-group and form-label</label>
+            <input type="text" class="form-control" id="textitem7" name="textitem7" value="form-control">
+        </div>
+    </div>
+</div>
+
+<div class="row my-2 border-bottom">
+    <p class="text-center"><strong>8.</strong> One input box &lt;input-group&gt; with justify-content-end on the col</p>
+    <div class="col-12 d-flex justify-content-end">
+        <div class="input-group">
+            <span class="input-group-text">Label</span>
+            <input type="text" class="form-control" id="textitem8" name="textitem8" value="form-control">
+        </div>
+    </div>
+</div>
+
+<div class="row my-2 border-bottom">
+    <p class="text-center"><strong>9.</strong> One input box &lt;input-group&gt; with justify-col-end on the col and w-25 on the input group</p>
+    <div class="col-12 d-flex justify-content-end">
+        <div class="input-group w-25">
+            <span class="input-group-text">Label</span>
+            <input type="text" class="form-control" id="textitem9" name="textitem9" value="form-control">
+        </div>
+    </div>
+</div>
+
+<div class="row my-2 border-bottom">
+    <p class="text-center"><strong>10.</strong> One input box &lt;input-group&gt; with justify-col-center on the col and w-25 on the input group</p>
+    <div class="col-12 d-flex justify-content-center">
+        <div class="input-group w-25">
+            <span class="input-group-text">Label</span>
+            <input type="text" class="form-control" id="textitem10" name="textitem10" value="form-control">
+        </div>
+    </div>
+</div>
+
+<div class="row my-2 border-bottom">
+    <p class="text-center"><strong>11.</strong> One input box &lt;input-group&gt; with justify-col-start on the col and w-25 on the input group</p>
+    <div class="col-12 d-flex justify-content-start">
+        <div class="input-group w-25">
+            <span class="input-group-text">Label</span>
+            <input type="text" class="form-control" id="textitem11" name="textitem11" value="form-control">
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

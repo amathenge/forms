@@ -1,0 +1,186 @@
+{% extends 'base.html' %}
+{% from 'utils.j2' import nav %}
+
+{% block heading %}Horizontal Forms{% endblock %}
+
+{% block content %}
+{{ nav() }}
+<div class="row">
+    <p class="text-center">Checkboxes</p>
+</div>
+
+
+<div class="row my-2 border-bottom justify-content-center">
+    <p class="text-start border"><strong>1.</strong> Checkboxes - will these align center? Each have their own &lt;div class="form-check"&gt;</p>
+    <div class="col-6 align-items-center border">
+        <div class="input-group border">
+            <div class="form-check border">
+                <input class="form-check-input" type="checkbox" id="check1">
+                <label for="check1">Check 1</label>
+            </div>
+            <div class="form-check ms-3 border">
+                <label for="check2">Check 2</label>
+                <input class="form-check-input" type="checkbox" id="check2">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row my-2 border-bottom justify-content-center">
+    <p class="text-start"><strong>2.</strong> Interesting - one can do a lot with <strong>&lt;div class="form-check"&gt;</strong></p>
+    <div class="col-6 align-items-center justify-content-center border">
+        <div class="input-group border">
+            <input class="form-check-input" type="checkbox">
+            <span type="input-group-text" class="mx-2">Check 1</span>
+            <span type="input-group-text" class="mx-2">Check 2</span>
+            <input class="form-check-input" type="checkbox">
+        </div>
+    </div>
+</div>
+
+<div class="row my-2 border-bottom justify-content-center">
+    <p class="text-start"><strong>3.</strong> For horizontal checkboxes, you need <strong>form-check-inline</strong> around each of the
+    checkboxes</p>
+    <div class="col-6 align-items-center justify-content-center border">
+        <div class="form-check form-check-inline border">
+            <input class="form-check-input" type="checkbox" id="check3">
+            <label for="check3">check 3</label>
+        </div>
+        <div class="form-check form-check-inline ms-2 border">
+            <label for="check4">check 4</label>
+            <input class="form-check-input" type="checkbox" id="check4">
+        </div>
+    </div>
+</div>
+
+<div class="row border-bottom justify-content-center">
+    <p class="text-start"><strong>4.</strong> A checkbox can have a label that is a <strong>&lt;span&gt;</strong></p>
+    <div class="col-6 border">
+        <div class="form-check form-check-inline border">
+            <span class="input-form-text">check 5</span>
+            <input class="form-check-input" type="checkbox" id="check5">
+        </div>
+    </div>
+</div>
+
+<div class="row border-bottom justify-content-center">
+    <p class="text-start"><strong>5.</strong> A checkbox can have a label that is a <strong>&lt;label&gt;</strong></p>
+    <div class="col-6 border">
+        <div class="form-check form-check-inline border">
+            <label for="check6">check 6</label>
+            <input class="form-check-input" type="checkbox" id="check6">
+        </div>
+    </div>
+</div>
+
+<div class="row border-bottom justify-content-center">
+    <p class="text-start"><strong>6.</strong> Each of these radio buttons have a <strong>form-check</strong> and <strong>form-check-inline</strong>
+    around each of them. The labels are also <strong>&lt;span&gt;</strong>'s They have <strong>justify-content-center</strong> in the enclosing
+    <strong>col</strong> &lt;div&gt;</p>
+    <div class="col-6 d-flex justify-content-center border">
+        <div class="form-check form-check-inline border">
+            <span class="input-form-text">radio 7</span>
+            <input class="form-check-input" type="radio" name="check78" id="check7">
+        </div>
+        <div class="form-check form-check-inline border">
+            <span class="input-form-text">radio 8</span>
+            <input class="form-check-input" type="radio" name="check78" id="check8">
+        </div>
+    </div>
+</div>
+
+<div class="row border-bottom justify-content-center">
+    <p class="text-start"><strong>7.</strong> These radio buttons are like the ones above, but they have <strong>&lt;label&gt;</strong>'s for
+    their labels. The enclosing <strong>col</strong> &lt;div&gt; has no additional class items</p>
+    <div class="col-6 border">
+        <div class="form-check form-check-inline border">
+            <label for="check9">radio 9</label>
+            <input class="form-check-input" type="radio" name="check910" id="check9">
+        </div>
+        <div class="form-check form-check-inline border">
+            <label for="check10">radio 10</label>
+            <input class="form-check-input" type="radio" name="check910" id="check10">
+        </div>
+    </div>
+</div>
+
+<div class="row border-bottom justify-content-center">
+    <p class="text-start"><strong>8.</strong> These radio buttons have &lt;label&gt;s but are also inline radio buttons. The enclosing
+    <strong>col</strong> &lt;div&gt; has <strong>justify-content-end</strong></p>
+    <div class="col-6 d-flex justify-content-end border">
+        <div class="form-check form-check-inline border">
+            <label for="check9">radio 11</label>
+            <input class="form-check-input" type="radio" name="check1112" id="check9">
+        </div>
+        <div class="form-check form-check-inline border">
+            <label for="check10">radio 12</label>
+            <input class="form-check-input" type="radio" name="check1112" id="check10">
+        </div>
+    </div>
+</div>
+
+
+<div class="row border-bottom justify-content-center">
+    <p class="text-start"><strong>9.</strong> This checkbox is wrapped around a &lt;div&gt; that is <strong>input-group-text</strong> that is why
+    it has the grey background. The label is a &lt;span&gt; that is after the checkbox</p>
+    <div class="col-6 border">
+        <div class="input-group border">
+            <div class="input-group-text">
+                <input class="form-check-input" type="checkbox" id="check13">
+            </div>
+            <span class="col-form-label ms-2">check 13</span>
+        </div>
+    </div>
+</div>
+
+<div class="row border-bottom justify-content-center">
+    <p class="text-start"><strong>10.</strong> An input-group checkbox - the actual checkbox is enclosed in a &lt;div&gt; that has
+    <strong>input-group-text</strong>. The label is a &lt;label&gt; that is before the checkbox.</p>
+    <div class="col-6 border">
+        <div class="input-group border">
+            <label for="check6" class="col-form-label me-2">check 14</label>
+            <div class="input-group-text">
+                <input class="form-check-input" type="checkbox" id="check14">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row border-bottom justify-content-center">
+    <p class="text-start"><strong>11.</strong> These two radio items are inside a single <strong>input-group</strong> - not like the
+    checkboxes. Both have a &lt;label&gt; in front of the checkbox, and each checkbox is enclosed in a &lt;div&gt; that has
+    <strong>input-group-text</strong></p>
+    <div class="col-6 border">
+        <div class="input-group border">
+            <label for="check15" class="col-form-label mx-2">radio 15</label>
+            <div class="input-group-text">
+                <input class="form-check-input mx-2" type="radio" name="check1516" id="check15">
+            </div>
+            <label for="check16" class="col-form-label mx-2">radio 16</label>
+            <div class="input-group-text">
+                <input class="form-check-input mx-2" type="radio" name="check1516" id="check14">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row my-2 border-bottom justify-content-center">
+    <p class="text-start"><strong>12.</strong> This is like the one above, but both the checkbox and &lt;label&gt; are enclosed in
+    a &lt;div&gt; that has a class of <strong>form-check</strong></p>
+    <div class="col-6 d-flex justify-content-center border">
+        <div class="input-group d-flex justify-content-center border">
+            <div class="form-check border">
+                <input class="form-check-input" type="checkbox" id="check17">
+                <label for="check17">Check 1</label>
+            </div>
+            <div class="form-check ms-3 border">
+                <label for="check18">Check 2</label>
+                <input class="form-check-input" type="checkbox" id="check18">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}

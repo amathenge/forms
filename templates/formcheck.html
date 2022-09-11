@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+
+{% block scripts %}
+<script type="text/javascript">
+    function showdata() {
+        return true;
+    }
+</script>
+
+
+{% endblock %}
+
+{% block heading %}More Challenges with Bootstrap Forms{% endblock %}
+
+{% block content %}
+<form action="{{ url_for('formcheck') }}" onsubmit="return showdata()" method="POST">
+
+<div class="row mt-5 justify-content-center border-bottom">
+    <div class="col d-flex justify-content-center border align-items-middle border-primary">
+        <div class="input-group align-items-center">
+            <label for="item1">Item 1</label>
+            <input type="text" id="item1" name="item" class="form-control ms-1">
+        </div>
+        <div class="input-group">
+            <span class="input-group-text">Item 2</span>
+            <input type="text" id="item2" name="item" class="form-control">
+        </div>
+        <div class="input-group">
+            <span class="input-group-text">Item 3</span>
+            <input type="text" id="item3" name="item" class="form-control">
+        </div>
+        <div class="input-group">
+            <span class="input-group-text">Item 4</span>
+            <input type="text" id="item4" name="item" class="form-control">
+        </div>
+        <div class="input-group">
+            <span class="input-group-text">Item 5</span>
+            <input type="text" id="item5" name="item" class="form-control">
+        </div>
+    </div>
+</div>
+
+<div class="row mt-5 justify-content-center border-bottom">
+    <div class="col d-flex justify-content-center align-items-end border">
+        <div class="form-check form-check-inline">
+            <label for="radio1">Radio 1</label>
+            <input type="radio" class="form-check-input" id="radio1" name="rads">
+        </div>
+        <div class="form-check form-check-inline">
+            <label for="radio1">Radio 2</label>
+            <input type="radio" class="form-check-input" id="radio2" name="rads">
+        </div>
+        <div class="form-check form-check-inline">
+            <label for="radio1">Radio 3</label>
+            <input type="radio" class="form-check-input" id="radio3" name="rads">
+        </div>
+        <div class="form-check form-check-inline">
+            <label for="radio1">Radio 4</label>
+            <input type="radio" class="form-check-input" id="radio4" name="rads">
+        </div>
+        <div class="form-check form-check-inline">
+            <label for="radio1">Radio 5</label>
+            <input type="radio" class="form-check-input" id="radio5" name="rads">
+        </div>
+    </div>
+</div>
+
+
+</form>
+
+
+
+
+
+
+
+{% endblock %}

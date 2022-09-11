@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% from 'utils.j2' import nav %}
+
+{% block heading %}Horizontal Forms{% endblock %}
+
+{% block content %}
+{{ nav() }}
+<div class="row">
+    <p class="text-center">More Input Forms</p>
+</div>
+
+<div class="row my-2 border-bottom justify-content-center">
+    <p class="text-center"><strong>1.</strong> One input box &lt;input-group&gt; with justify-content-end on the col. This is <strong>#5</strong>
+    from the <a href="{{ url_for('fform2') }}">more forms examples</a>, but I've used a &lt;justify-content-center&gt; on the &lt;row&gt; and the col is a &lt;col-4&gt;</p>
+    <div class="col-4 d-flex justify-content-end">
+        <div class="input-group">
+            <span class="input-group-text">Label</span>
+            <input type="text" class="form-control" id="textitem1" name="textitem1" value="form-control">
+        </div>
+    </div>
+</div>
+
+<div class="row my-2 border-bottom justify-content-center">
+    <p class="text-center"><strong>2.</strong> One input box &lt;input-group&gt; with justify-content-end on the col. This is <strong>#5</strong>
+    above, without a &lt;span&gt; for the label, instead a &lt;label&gt; which has a class="col-form-label"</p>
+    <div class="col-4">
+        <div class="input-group">
+            <label class="col-form-label mx-2">Label</label>
+            <input type="text" class="form-control" id="textitem2" name="textitem2" value="form-control">
+        </div>
+    </div>
+</div>
+
+<div class="row my-2 border-bottom justify-content-center">
+    <p class="text-center"><strong>3.</strong> One input box &lt;input-group&gt; with justify-content-end on the col. This is <strong>#6</strong>
+    above, we have now put a border on the &lt;label&gt; and given it a margin on the right of 1 and some padding of 2 and a background colour</p>
+    <div class="col-4">
+        <div class="input-group">
+            <label class="col-form-label border me-1 px-2 bg-secondary bg-opacity-25 text-dark">Label</label>
+            <input type="text" class="form-control" id="textitem3" name="textitem3" value="form-control">
+        </div>
+    </div>
+</div>
+
+<div class="row my-2 border-bottom justify-content-center">
+    <p class="text-center"><strong>4.</strong> One input box &lt;input-group&gt; with justify-content-end on the col. This is <strong>#6</strong>
+    above, we have now put a border on the &lt;label&gt; and no margin some padding of 2 and a background colour - should start looking like
+    the span.</p>
+    <div class="col-4">
+        <div class="input-group">
+            <label class="col-form-label border px-2 bg-secondary bg-opacity-25 text-dark">Label</label>
+            <input type="text" class="form-control" id="textitem4" name="textitem4" value="form-control">
+        </div>
+    </div>
+</div>
+
+
+<div class="row my-2 border-bottom justify-content-center">
+    <p class="text-center"><strong>5.</strong> This example has a floating label. It is important that the &lt;label&gt; is defined
+    <strong><i>after</i></strong> the &lt;input&gt;</p>
+    <div class="col-4">
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="textitem5" name="textitem5">
+            <label for="textitem5">Floating Label</label>
+        </div>
+    </div>
+</div>
+
+<div class="row my-2 border-bottom justify-content-center">
+    <p class="text-center"><strong>6.</strong> This example has a floating label with a value</p>
+    <div class="col-4">
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="textitem6" name="textitem6" value="value">
+            <label for="textitem6">Another Floating Label</label>
+        </div>
+    </div>
+</div>
+
+
+<p>&nbsp;</p>
+
+{% endblock %}

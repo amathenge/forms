@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% from 'utils.j2' import nav, login %}
+
+{% block title %}Home Page{% endblock %}
+
+{% block heading %}Page Heading{% endblock %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-12">
+        {{ nav() }}
+    </div>
+</div>
+<div class="row justify-content-center my-3">
+    <div class="col-8 justify-content-center align-middle border border-secondary p-3">
+    <form class="d-flex" action="{{ url }}" method="POST">
+        <div class="input-group mx-2">
+            <span class="input-group-text">Email</span>
+            <input class="form-control" type="email" id="email" name="email" placeholder="user@email.com" maxlength="30" required>
+        </div>
+        <div class="input-group mx-2">
+            <span class="input-group-text">Password</span>
+            <input class="form-control" type="password" id="password" name="password" maxlength="30" required>
+        </div>
+        <div class="input-group d-grid text-center">
+            {% if recaptcha != None %}
+                {{ recaptcha }}
+            {% endif %}
+            <button class="btn btn-primary ms-3" type="submit">LOGIN</button>
+        </div>
+    </form>
+    </div>
+</div>
+
+{% if output %}
+<div class="row mt-5">
+    <div class="col-12 border">
+        {{ output }}
+    </div>
+</div>
+
+{% endif %}
+{% endblock %}
