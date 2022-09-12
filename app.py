@@ -30,11 +30,23 @@ def login():
 
 @app.route('/login2', methods=['GET','POST'])
 def login2():
-    return render_template('login2.html')
+    output = None
+    if request.method == 'POST':
+        email = request.form['email']
+        password = request.form['password']
+        output = f"your email is {email} and your password is {password}"
+
+    return render_template('login2.html', output=output)
 
 @app.route('/login3', methods=['GET','POST'])
 def login3():
-    return render_template('login3.html')
+    output = None
+    if request.method == 'POST':
+        email = request.form['email']
+        password = request.form['password']
+        output = f"your email is {email} and your password is {password}"
+
+    return render_template('login3.html', output=output)
 
 @app.route('/users')
 def users():
