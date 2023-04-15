@@ -1,3 +1,8 @@
+'''
+    This is an application to show off Bootstrap 5 forms and create a template
+    that can be reused for some of my applications.
+'''
+
 from flask import Flask, render_template, request
 # from flask_recaptcha import ReCaptcha
 # import cred
@@ -91,3 +96,7 @@ def formcheck():
 @app.route('/logout')
 def logout():
     return render_template('logout.html')
+
+
+if __name__ == "__main__":
+    app.run(debug=True, host="0.0.0.0", port=8080)

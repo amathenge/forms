@@ -1,6 +1,8 @@
 from flask import g
 import sqlite3
 
+# database connection module.
+
 def connect_db():
     sql = sqlite3.connect('/home/aamathenge/forms/data.db')
     sql.row_factory = sqlite3.Row

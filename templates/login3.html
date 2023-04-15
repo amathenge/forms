@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% from 'utils.j2' import nav, login %}
+{% from 'utils.j2' import nav, login3 %}
 
 {% block title %}Login Form 3{% endblock %}
 
@@ -12,24 +12,10 @@
         {{ nav() }}
     </div>
 </div>
+
 <div class="row justify-content-center my-3">
     <div class="col-8 justify-content-center align-middle border border-secondary p-3">
-    <form class="d-flex" action="{{ url }}" method="POST">
-        <div class="input-group">
-            <span class="input-group-text visually-hidden">Email</span>
-            <input class="form-control mx-1" type="email" id="email" name="email" placeholder="user@email.com" maxlength="30" required>
-        </div>
-        <div class="input-group">
-            <span class="input-group-text visually-hidden">Password</span>
-            <input class="form-control mx-1" type="password" id="password" name="password" maxlength="30" placeholder="Password" required>
-        </div>
-        <div class="input-group d-grid text-center">
-            {% if recaptcha != None %}
-                {{ recaptcha }}
-            {% endif %}
-            <button class="btn btn-primary ms-3" type="submit">LOGIN</button>
-        </div>
-    </form>
+        {{ login3(url) }}
     </div>
 </div>
 

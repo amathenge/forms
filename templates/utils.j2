@@ -53,7 +53,7 @@
 {%- endmacro %}
 
 
-# LOGIN FORM
+# LOGIN FORM 1 = row type login box
 
 {% macro login(url, recaptcha=None) -%}
 <form action="{{ url }}" method="POST">
@@ -73,3 +73,74 @@
 </div>
 </form>
 {%- endmacro %}
+
+
+# LOGIN FORM 2 = column type login box
+
+{% macro login2(url, recaptcha=None) -%}
+<form class="d-flex" action="{{ url }}" method="POST">
+    <div class="input-group mx-2">
+        <span class="input-group-text">Email</span>
+        <input class="form-control" type="email" id="email" name="email" placeholder="user@email.com" maxlength="30" required>
+    </div>
+    <div class="input-group mx-2">
+        <span class="input-group-text">Password</span>
+        <input class="form-control" type="password" id="password" name="password" maxlength="30" required>
+    </div>
+    <div class="input-group d-grid text-center">
+        {% if recaptcha != None %}
+            {{ recaptcha }}
+        {% endif %}
+        <button class="btn btn-primary ms-3" type="submit">LOGIN</button>
+    </div>
+</form>
+{%- endmacro %}
+
+# LOGIN FORM 3 = column type but labels not included (hint inside the login boxes)
+
+{% macro login3(url, recaptcha=None) -%}
+<form class="d-flex" action="{{ url }}" method="POST">
+    <div class="input-group">
+        <span class="input-group-text visually-hidden">Email</span>
+        <input class="form-control mx-1" type="email" id="email" name="email" placeholder="user@email.com" maxlength="30" required>
+    </div>
+    <div class="input-group">
+        <span class="input-group-text visually-hidden">Password</span>
+        <input class="form-control mx-1" type="password" id="password" name="password" maxlength="30" placeholder="Password" required>
+    </div>
+    <div class="input-group d-grid text-center">
+        {% if recaptcha != None %}
+            {{ recaptcha }}
+        {% endif %}
+        <button class="btn btn-primary ms-3" type="submit">LOGIN</button>
+    </div>
+</form>
+{%- endmacro %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
